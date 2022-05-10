@@ -7,6 +7,8 @@
 > - **개요**
 >   - 스레드 당 하나의 I / O 요청을 처리하는 모델
 >   - inputStream, outputStream을 통해 데이터 I / O를 처리
+>     - 클라이언트의 요청을 Stream으로 읽는다. 
+>     - 클라이언트에 전송할 응답을 Stream으로 쓴다. 
 > - **작업 순서**
 >   1. 스레드에서 I / O 작업을 요청
 >   2. 스레드는, I / O 작업이 끝날 때 까지 다음 라인을 수행할 수 없음
@@ -56,15 +58,22 @@
 #### 비동기(Async) I / O 모델
 
 > - **개요**
+>
 >   - I / O 작업을 등록한 이후, I / O 작업과 상관 없는 프로세스를 계속 처리하는 모델
 >   - 그렇지만, I / O 처리가 완료된 이후에 가능한 작업은 완료를 기다려야 한다. 
 >     - JavaScript의 async - await과 유사한 흐름
+>
 > - **특징**
+>
 >   - 난이도가 높고, 신경써야 할 부분이 많다. 
 >     - 자원 충돌, 이에 따른 예외 발생 (교착 상태, 상호 배제 실패 등)
+>
 > - **구현체**
+>
 >   - IOCP, Input / Output Completion Port
 >     - 기존 Windows 최고 성능 API
+>     - Thread-safe
+>
 >   - RIO, Registered I/O Model
 >     - Windows 8.1 이상
 >   - io_uring
