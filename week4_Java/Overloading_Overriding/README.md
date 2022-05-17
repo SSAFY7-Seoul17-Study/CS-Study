@@ -48,7 +48,7 @@ class Test {
   	// 1번 전달받은 num1을 그대로 출력
     static void display(int num1) { System.out.println(num1); }	 
 
-  	// 2번 전달받은 두 정수의 곲을 출력함
+  	// 2번 전달받은 두 정수의 곱을 출력함
     static void display(int num1, int num2) { System.out.println(num1 * num2); }	
 
   	// 3번 전달받은 정수와 실수의 합을 출력
@@ -93,7 +93,7 @@ public class Method06 {
 
 ## 2. Overriding
 
-### 1. 정의 : 상속 관계에 있는 부모 클래스에서 이미 정의된 메소드를 자식 클래스에서 같은 시그니쳐를 갖는 메소드로 다시 정의하는 것
+### 1. 정의 : 상속 관계에 있는 부모 클래스에서 이미 정의된 메소드를 자식 클래스에서 같은 시그니처를 갖는 메소드로 다시 정의하는 것
 
 - Java 에서 자식 클래스는 부모 클래스의 private  멤버를 제외한 모든 메소드를 상속 받는다.
 
@@ -185,4 +185,17 @@ public class Inheritance06 {
 
 ## 요약
 
-![1.png](/Users/kit938639/Documents/study/CS-Study/week4_Java/Overloading_Overriding/img/1.png)
+![1](./img/1.png)
+
+
+
+------
+
+#### 참고자료
+
+1. [TCP-School 메소드 오버로딩](http://www.tcpschool.com/java/java_usingMethod_overloading) 
+2. [해시넷 메소드 오버로딩](http://wiki.hash.kr/index.php/%EC%98%A4%EB%B2%84%EB%A1%9C%EB%94%A9)
+3. [TCP-School 메소드 오버라이딩](http://www.tcpschool.com/java/java_inheritance_overriding)
+4. [해시넷 메소드 오버라이딩](http://wiki.hash.kr/index.php/%EC%98%A4%EB%B2%84%EB%9D%BC%EC%9D%B4%EB%94%A9)
+5. [메소드 시그니처와 메소드 타입](https://amagrammer91.tistory.com/135)
+6. [이펙티브 자바. 메소드 규칙 41 오버로딩할 때는 주의하라](https://wedul.site/296)
