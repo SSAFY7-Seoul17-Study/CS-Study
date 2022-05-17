@@ -21,7 +21,7 @@
 - Netscape사에서 웹서버와 브라우저 사이의 보안을 위해 만듬 [1.png]
 - 인터넷과 같이 TCP/IP 네트워크를 사용하는 통신에 적용됨. [2.png]
 
-![1.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/1.png)           ![2.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/2.png)
+![1.png](./img/1.png)           ![2.png](./img/2.png)
 
 - SSL과 TLS
 
@@ -37,7 +37,7 @@ SSL의 핵심은 암호화이다. SSL은 보안과 성능상의 이유로 두가
 - 키 생성이 빠르지만 키를 탈취 당할 경우 보안에 취약함
 - 때문에 키 교환이 어려움
 
-![3.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/3.png)
+![3.png](./img/3.png)
 
 ### 2. 공개키 방식
 
@@ -54,7 +54,7 @@ SSL의 핵심은 암호화이다. SSL은 보안과 성능상의 이유로 두가
 - 공개키를 교환하는 것은 매우 쉬움
 - 하지만 암호화 속도가 느림
 
-![4.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/4.png)
+![4.png](./img/4.png)
 
 
 
@@ -68,27 +68,27 @@ SSL의 핵심은 암호화이다. SSL은 보안과 성능상의 이유로 두가
 
 1. A에서 B로 접속 요청을 보냄
 
-![5.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/5.png)
+![5.png](./img/5.png)
 
 2. B는 A에게 자신의 공개키를 전송
 
-![6.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/6.png)
+![6.png](./img/6.png)
 
 3. A는 자신의 대칭키를 B에서 전달받은 B의 공개키로 암호화
 
-![7.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/7.png)
+![7.png](./img/7.png)
 
 4. 암호화한 자신의 대칭키를 B에게 전달
 
-![8.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/8.png)
+![8.png](./img/8.png)
 
 5. B는 A의 대칭키를 자신의 비밀키로 복호화, 이 결과로 A의 대칭키를 얻어냄.
 
-![9.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/9.png)
+![9.png](./img/9.png)
 
 6. 얻은 대칭키를 통해 A와 B는 안전하게 통신
 
-![10.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/10.png)
+![10.png](./img/10.png)
 
 정리하면 데이터 암호화와 복호화를 위한 한 쪽의 대칭키를 다른 쪽의 공개키로 암호화하여 전송하면 반대편에서 자신의 비밀키로 복호화하여 그 반대편의 대칭키를 알아내고 이 대칭키를 바탕으로 통신을 함.
 
@@ -100,47 +100,47 @@ SSL의 핵심은 암호화이다. SSL은 보안과 성능상의 이유로 두가
 
 1. 우선, 사이트는 사이트 인증서가 필요하다. 사이트 인증서는 인증기관에서 사이트에게 발급하는 문서, 이를 위해 사이트에서 인증기관에게 사이트 정보와 사이트 공개키를 전달
 
-![11.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/11.png)
+![11.png](./img/11.png)
 
 2. 인증기관에서는 사이트 인증서를 발급하기 전, 먼저 전달받은 데이터를 검증
 
-![12.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/12.png)
+![12.png](./img/12.png)
 
 3. 인증기관에서 성공적으로 검증을 완료하면, 인증기관은 사이트 인증서를 생성하기 위해 데이터를 자신의 비밀키로 서명
 
-![13.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/13.png)
+![13.png](./img/13.png)
 
 4. 서명 이 후 사이트 인증서가 생성되고, 인증기관은 이 인증서를 사이트에 전달
 
-![14.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/14.png)
+![14.png](./img/14.png)
 
 5. 인증기관은 사용자에게 자신의 공개키 전달
 
-![15.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/15.png)
+![15.png](./img/15.png)
 
 6. 사용자가 인증기관으로부터 전달받은 인증기관 공개키는 사용자 브라우저에 자동으로 내장
 
-![16.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/16.png)
+![16.png](./img/16.png)
 
 7. 사용자가 사이트에 접속요청을 보내면 사이트는 자신이 신뢰할 수 있는 사이트 임을 증명하기 위해 사용자에게 자신의 인증서 전달
 
-![17.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/17.png)
+![17.png](./img/17.png)
 
 8. 사용자는 브라우저에 내장되어 있는 인증기관 공개키로 사이트 인증서를 복호화하여 검증, 사이트 인증서를 해독하면 사이트 정보와 사이트 공개키를 얻을 수 있다.
 
-![18.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/18.png)
+![18.png](./img/18.png)
 
 9. 이렇게 얻은 사이트 공개키로, 사용자는 자신의 대칭키를 암호화 한 후 사이트에 전달
 
-![19.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/19.png)
+![19.png](./img/19.png)
 
 10. 사이트는 자신의 비밀키로 사용자로부터 전달받은 암호문을 해독하여 사용자의 대칭키를 얻음
 
-![20.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/20.png)
+![20.png](./img/20.png)
 
 11. 이렇게 얻은 대칭키를 활용하여 사용자와 사이트는 암호문을 주고 받을 수 있게 된다. SSL은 사이트 외에 인증기관과 사용자도 협력하기에 안전한 접속 방법이 되며 사용자는 접속하는 사이트가 믿을 수 있는 사이트인지 확인이 가능해진다.
 
-![21.png](/Users/kit938639/Documents/study/CS-Study/week3_NETWORK/SSL/img/21.png)
+![21.png](./img/21.png)
 
 
 
